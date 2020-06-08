@@ -31,3 +31,7 @@ Route::delete('/contacts/{id}', 'ContactController@delete')->name('contacts.dele
 
 Route::get('/contacts/{id}/edit', 'ContactController@edit')->name('contacts.edit');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
