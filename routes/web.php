@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::middleware('auth')->group(function(){
+
 Route::get('/contacts', 'ContactController@index')->name('contacts.index');
 
 Route::post('/contacts', 'ContactController@store')->name('contacts.store');
@@ -30,6 +32,10 @@ Route::put('/contacts/{id}', 'ContactController@update')->name('contacts.update'
 Route::delete('/contacts/{id}', 'ContactController@delete')->name('contacts.delete');
 
 Route::get('/contacts/{id}/edit', 'ContactController@edit')->name('contacts.edit');
+
+});
+
+Route::get('/settings/account', 'Settings\AccountController@index');
 
 
 Auth::routes();
