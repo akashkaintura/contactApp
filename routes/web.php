@@ -34,4 +34,4 @@ Route::get('/contacts/{id}/edit', 'ContactController@edit')->name('contacts.edit
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'HomeController@index')->name('home');
