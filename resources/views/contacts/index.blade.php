@@ -2,8 +2,6 @@
 
 @section('title', 'Contact App | All contacts')
 
-
-
 @section('content')
 <main class="py-5">
     <div class="container">
@@ -47,7 +45,7 @@
                         <td width="150">
                           <a href="{{ route('contacts.show', $contact->id) }}" class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
                           <a href="{{ route('contacts.edit', $contact->id) }}" class="btn btn-sm btn-circle btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></a>
-                          <a href="{{ route('contacts.delete', $contact->id) }}" class="btn-delete btn btn-sm btn-circle btn-outline-danger" title="Delete"><i class="fa fa-times"></i></a>
+                          <a href="{{ route('contacts.destroy', $contact->id) }}" class="btn-delete btn btn-sm btn-circle btn-outline-danger" title="Delete"><i class="fa fa-times"></i></a>
                         </td>
                       </tr>
                      @endforeach
@@ -60,7 +58,7 @@
                  @endif
                 </tbody>
               </table>
-
+              {{-- compnaies value  --}}
              {{ $contacts->appends(request()->only('company_id'))->links() }}
             </div>
           </div>

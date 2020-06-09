@@ -28,7 +28,7 @@
         <div class="collapse navbar-collapse" id="navbar-toggler">
           @auth
             <ul class="navbar-nav">
-              <li class="nav-item"><a href="#" class="nav-link">Companies</a></li>
+              <li class="nav-item"><a href="{{ route('companies.index') }}" class="nav-link">Companies</a></li>
               <li class="nav-item active"><a href="{{ route('contacts.index') }}" class="nav-link">Contacts</a></li>
             </ul>
           @endauth
@@ -42,7 +42,7 @@
                   {{ auth()->user()->name }}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Settings</a>
+                  <a class="dropdown-item" href="">Settings</a>
                   <a class="dropdown-item" href="{{ route('logout') }}"
                       onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">

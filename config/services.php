@@ -30,4 +30,8 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    // 'mailtrap' => [
+    //     'key'       => '36ae5f594f64a8d4ca824ea28e11e7cf',
+    //     'token'     => 'eyJhbGciOiJIUzUxMiJ9.eyJkYXRhIjp7InRva2VuIjoiMzZhZTVmNTk0ZjY0YThkNGNhODI0ZWEyOGUxMWU3Y2YifX0.HDNJFcHM6CgrmB_IqzRwl8owb6xFND2By1oKLAiO1PdZu80Yx_JRo6auHc6DmeaDCXXJVKzNDNBlwJ5dYuJIcg',
+
 ];

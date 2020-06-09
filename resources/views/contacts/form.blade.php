@@ -29,9 +29,9 @@
           <div class="col-md-9">
             <input type="text" name="email" value="{{ old('email', $contact->email) }}" id="email" class="form-control @error('email') is-invalid @enderror">
             @error('email')
-              <div class="invalid-feedback">
+              {{-- <div class="invalid-feedback">
                   {{ $message }}
-              </div>
+              </div> --}}
             @enderror
           </div>
         </div>

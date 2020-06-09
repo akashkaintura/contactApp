@@ -1,7 +1,6 @@
 @extends('layouts.main')
 
 @section('content')
-
 <main class="py-5">
     <div class="container">
       <div class="row justify-content-md-center">
@@ -16,7 +15,7 @@
                   <div class="form-group row">
                     <label for="first_name" class="col-md-3 col-form-label">First Name</label>
                     <div class="col-md-9">
-                      <p class="form-control-plaintext text-muted">{{ $contact->first_name }}}</p>
+                      <p class="form-control-plaintext text-muted">{{ $contact->first_name }}</p>
                     </div>
                   </div>
 
@@ -37,29 +36,30 @@
                   <div class="form-group row">
                     <label for="phone" class="col-md-3 col-form-label">Phone</label>
                     <div class="col-md-9">
-                      <p class="form-control-plaintext text-muted">{{ $contact->phone}}</p>
+                      <p class="form-control-plaintext text-muted">{{ $contact->phone }}</p>
                     </div>
                   </div>
 
                   <div class="form-group row">
                     <label for="name" class="col-md-3 col-form-label">Address</label>
                     <div class="col-md-9">
-                      <p class="form-control-plaintext text-muted">{{ $contact->address}}</p>
+                      <p class="form-control-plaintext text-muted">{{ $contact->address }}</p>
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="company_id" class="col-md-3 col-form-label">Company</label>
                     <div class="col-md-9">
-                      <p class="form-control-plaintext text-muted">{{ $contact->company->email}}</p>
+                      <p class="form-control-plaintext text-muted">{{ $contact->company->email }}</p>
                     </div>
                   </div>
                   <hr>
                   <div class="form-group row mb-0">
                     <div class="col-md-9 offset-md-3">
-                        <a href="#" class="btn btn-info">Edit</a>
-                        <a href="#" class="btn btn-outline-danger">Delete</a>
+                        <a href="{{ route('contacts.edit', $contact->id) }}" class="btn btn-info">Edit</a>
+                        <a href="{{ route('contacts.destroy', $contact->id) }}" class="btn-delete btn btn-outline-danger">Delete</a>
                         <a href="{{ route('contacts.index') }}" class="btn btn-outline-secondary">Cancel</a>
                     </div>
+                    @include('layouts._delete-form')
                   </div>
                 </div>
               </div>
@@ -68,5 +68,5 @@
         </div>
       </div>
     </div>
-  </main>
-  @endsection
+</main>
+@endsection

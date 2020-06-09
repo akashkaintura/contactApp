@@ -12,6 +12,9 @@ class Contact extends Model
 
     public $filterColumns = ['company_id'];
 
+    public $searchColumns = ['first_name', 'last_name', 'email', 'company.name'];
+
+
     public function company()
     {
         return $this->belongsTo(Company::class);
